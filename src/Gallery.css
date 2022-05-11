@@ -1,0 +1,128 @@
+.gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 33%;
+    -moz-column-width: 33%;
+    column-width: 33%;
+    padding: 0, 12px;
+    vertical-align: top;
+    display: inline-block;
+    
+}
+
+.gallery.pics {
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease;
+    cursor: pointer;
+    margin-bottom: 2.5%;
+    block-size: 3vw;;
+}
+
+.galleryContainer.about {
+    visibility: hidden;
+}
+
+.gallery .pics:hover{
+    filter: opacity(.8);
+    cursor: pointer;
+}
+
+@media (max-width: 991px){
+    .gallery {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media (max-width: 480px){
+    .gallery {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        -webkit-column-width: 100%;
+        -moz-column-width: 100%;
+        column-width: 100%;
+    }
+}
+
+.model {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.91);
+    transition: opacity .4s ease, visibility .4s ease, transform .5s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    overflow: hidden;
+    z-index: 999;
+}
+
+.model.open{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.model img{
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    display: block;
+    line-height: 0;
+    box-sizing: border-box;
+    padding: 20px 0 20px;
+    margin: 0 auto;
+
+}
+
+.model.open svg{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 2rem;
+    height: 2rem;
+    padding: 5px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.766);
+    cursor: pointer;
+}
+
+.model.open button{
+    position: absolute;
+    bottom: 20%;
+    background-color: rgba(2, 20, 27, 0.63);
+    color: white;
+    display: block;
+    width: 30%;
+    border: none;
+    padding: 14px, 28px;
+    font-size: 2rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px;
+    text-shadow: 1px, 1px black;
+}
+
+.gallery.pics p {
+    visibility: hidden;
+}
+
+.imgAbout {
+    color: white;
+    background-color: rgba(2, 20, 27, 0.63);;
+    text-align: center;
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 2.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

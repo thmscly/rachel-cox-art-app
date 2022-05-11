@@ -1,0 +1,21 @@
+.about{
+    justify-content: center;
+    display: inline-flex;
+    grid-template-columns: 200px 200px;
+    margin-top: 0;
+    margin-bottom: 5%;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+}
+
+.about img {
+    max-width: 25%;
+    max-height: 33%;
+    border-radius: 3px;
+}
+
+.aboutText {
+    text-align: center;
+    margin-left: 1%;
+}
